@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidProcessLock"
 include(":app")
- 
+include(":libProcessLock")
