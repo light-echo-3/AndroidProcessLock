@@ -20,17 +20,17 @@ object AppForegroundBackgroundSwitchMonitor {
 
     //用于判断是否程序在前台
     private var isForeground = false  //用于判断是否程序在前台
-        get() = MultiProcessMMKV.mmkv.getBoolean(APP_LIFE_PAGE_IS_FOREGROUND, false)
+        get() = multiProcessMMKV.getBoolean(APP_LIFE_PAGE_IS_FOREGROUND, false)
         set(value) {
             field = value
-            MultiProcessMMKV.mmkv.putBoolean(APP_LIFE_PAGE_IS_FOREGROUND, value)
+            multiProcessMMKV.putBoolean(APP_LIFE_PAGE_IS_FOREGROUND, value)
         }
 
     private var isPaused = true
-        get() = MultiProcessMMKV.mmkv.getBoolean(APP_LIFE_PAGE_IS_PAUSED, true)
+        get() = multiProcessMMKV.getBoolean(APP_LIFE_PAGE_IS_PAUSED, true)
         set(value) {
             field = value
-            MultiProcessMMKV.mmkv.putBoolean(APP_LIFE_PAGE_IS_PAUSED, value)
+            multiProcessMMKV.putBoolean(APP_LIFE_PAGE_IS_PAUSED, value)
         }
     private var lastResumeActivityHC = 0
 
